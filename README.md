@@ -1,4 +1,4 @@
-# deep-keys 
+# deep-keys
 [![NPM version][npm-image]][npm-url]
 [![Build status][travis-image]][travis-url]
 [![Test coverage][coveralls-image]][coveralls-url]
@@ -6,7 +6,7 @@
 [![License][license-image]][license-url]
 [![Downloads][downloads-image]][downloads-url]
 
-> Creates an array composed of the own enumerable property names(including nested) of an object.
+> Creates an array composed of the own enumerable property names(including nested) of an object and array.
 
 **Note:** This kit works great with [obj-parse](https://github.com/a8m/obj-parse) _(get and set object properties in a fast and elegant way)._
 
@@ -27,10 +27,10 @@ var obj1 = {
   c: { d: { e: 1 }, f: 1 },
   d: { e: { f: { g: 1, h: 2 } } },
   e: 2,
-  f: { g: [] }
+  f: { g: [{ foo: 1 }, { bar: 2, baz: 3 }] }
 };
 deepKeys(obj1);
-//=> ['a', 'b.c', 'c.d.e', 'c.f', 'd.e.f.g', 'd.e.f.h', 'e', 'f.g']
+//=> ['a', 'b.c', 'c.d.e', 'c.f', 'd.e.f.g', 'd.e.f.h', 'e', 'f.g.0.foo', 'f.g.1.bar', 'f.g.1.baz']
 
 var obj2 = {
   type: 'customer',
@@ -69,4 +69,3 @@ MIT © [Ariel Mashraki](https://github.com/a8m)
 [license-url]: LICENSE
 [downloads-image]: http://img.shields.io/npm/dm/deep-keys.svg?style=flat-square
 [downloads-url]: https://npmjs.org/package/deep-keys
-
