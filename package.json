@@ -1,12 +1,12 @@
 {
-  "name": "deep-keys",
+  "name": "@david-vaclavek/deep-keys",
   "version": "0.5.0",
   "description": "Creates an array composed of the own enumerable property names(including nested) of an object and array.",
   "license": "MIT",
   "repository": "david-vaclavek/deep-keys",
   "author": {
-    "name": "Ariel Mashraki",
-    "email": "ariel@mashraki.co.il",
+    "name": "David Vaclavek",
+    "email": "vaclavek.dvd@gmail.com",
     "url": "https://github.com/david-vaclavek/deep-keys"
   },
   "engines": {
